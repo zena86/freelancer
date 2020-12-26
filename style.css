@@ -38,7 +38,7 @@ html, body {
 }
 .header {
 	width: 100%;
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 50;
@@ -56,7 +56,7 @@ html, body {
 }
 .header__logo {
     background-color: rgb(250, 92, 101);
-    width: 140px;
+    min-width: 140px;
     height: 75px;
     color: white;
     font-family:  "Domine-Bold", serif;
@@ -72,11 +72,19 @@ html, body {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-}   
+} 
+@media (max-width : 533px)  {
+	.header__logo {
+		position: absolute;
+		top: 0;
+		left: 15px;
+	}	
+}
 .dotLogo:after {
     content: ".";
     color: #74505e;
 }
+
 /*MENU*/
 
 .header__right {
@@ -84,11 +92,24 @@ html, body {
 	display: -ms-flexbox;
 	display: flex;
 }
+@media (max-width : 533px)  {
+	.header__right {
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		padding-left: 130px;
+		padding-top: 10px;
+	}	
+}
 .header__social {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	margin-left: 30px;
+}
+@media (max-width : 768px)  {
+	.header__social {
+		margin-left: 15px;
+	}	
 }
 nav {
     font-family: "Montserrat", sans-serif;
@@ -101,16 +122,30 @@ nav ul {
 	display: flex;
     list-style: none;
 }
+@media (max-width : 533px)  {
+	nav ul {
+		flex-wrap: wrap;
+		justify-content: flex-end;
+	}	
+}
 nav ul li {
 	margin-left: 30px;
+}
+@media (max-width : 768px)  {
+	nav ul li {
+		margin-left: 10px;
+	}
+}
+@media (max-width : 533px)  {
+	nav ul li {
+		margin-bottom: 5px;
+	}	
 }
 nav ul li a:link, nav ul li a:visited {
     color: rgb(38, 55, 66);
     line-height: 6px;
     text-decoration: none;
     text-transform: uppercase;
-	
-/*    padding: 0 10px;    */
 }
 nav ul li a:hover {
     color: #fa5c65;
@@ -119,6 +154,11 @@ nav ul li a:hover {
 	font-size: 22px;
 	color: #fa5c65;
 	margin-left: 20px;	
+}
+@media (max-width : 768px)  {
+	.header__icon i {
+		margin-left: 10px;
+	}	
 }
 .header__icon i:hover {
 	color: #314a5b;
@@ -136,12 +176,13 @@ nav ul li a:hover {
     background-size: cover;
 }
 .main-screen__content {
-	margin-top: 20vw;
+	margin-top: 27vw;
 	max-width: 600px;
 }
 @media (max-width : 768px)  {
 	.main-screen__content {
 		max-width: 100%;
+		margin-top: 120px;
 	}	
 }
 .main-screen__title {
@@ -154,7 +195,7 @@ nav ul li a:hover {
 }
 @media (max-width : 768px)  {
 	.main-screen__title {
-		font-size: 40px;
+		font-size: 36px;
 	}	
 }
 .main-screen__text {
@@ -193,7 +234,7 @@ nav ul li a:hover {
 }
 @media (max-width : 768px)  {
 	.advantages {
-		padding: 40px 0 20px;
+		padding: 40px 0 0;
 	}	
 }
 .advantages__body {
@@ -253,13 +294,13 @@ nav ul li a:hover {
     text-transform: uppercase;
     color: #fa5c65;
     font-weight: 900;
-	margin-bottom: 30px;
 }
 .more span:after {
     content: url(image/Arrow.png);  
 }
 .more span:hover {
     color: rgb(70, 80, 101);
+	cursor: pointer;
 }
 .more span:hover:after {
     content: url(image/arrowBlack.png);
@@ -271,7 +312,11 @@ nav ul li a:hover {
 	width: 100%;
 }
 .allContentPortfolio {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 }
 @media (max-width : 768px)  {
@@ -311,30 +356,49 @@ nav ul li a:hover {
     line-height: 1.467;
     margin-bottom: 30px;  
 }
+@media (max-width : 768px)  {
+	.picturePortfolio img {
+		max-width: 100%;
+	}	
+}
 
-
-
-/*OUR TEAM variant 2*/
+/*OUR TEAM*/
 
 .ourTeam {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    
+	padding-top: 30px;
 }
-.allBoys {
+.team__body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+@media (max-width : 768px)  {
+	.team__body {
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}	
+}
+.team__item {
+	flex-basis: 33.33%;
+	margin-right: 10px;
+	margin-bottom: 30px;
+}
+@media (max-width : 768px)  {
+	.team__item {
+		flex-basis: 100%;
+	}	
+}
+.team__item:last-child {
+	margin-right: 0;
+	margin-bottom: 0;
 }
 .contentAboutBoys {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+	align-items: center;
 }
 .titleOurTeam {
     font-family: "Montserrat-Bold", sans-serif;
@@ -349,11 +413,10 @@ nav ul li a:hover {
     font-size: 16px;
     color: rgb(154, 160, 171);
     line-height: 20px;
-    margin-bottom: 5%;
+    margin-bottom: 40px;
 }
 .textAboutBoys {
-    padding: 0 5%;
-    vertical-align: top;
+	margin-left: 10px;
 }
 .nameBoys {
     font-family: "Montserrat-Bold", sans-serif;
@@ -377,13 +440,13 @@ nav ul li a:hover {
 }
 .moreOurTeam {
     margin-top: 4%;
-    margin-bottom: 7%;
+    margin-bottom: 30px;
 }
 .moreOurTeam p {
     text-align: right;  
 }
 
-/*vaiant 2*/
+/*FOOTER*/
 
 
 .allFooter {
@@ -398,6 +461,12 @@ nav ul li a:hover {
     justify-content: space-between;
     border-top: solid 1px rgb(185, 192, 198);
 }
+@media (max-width : 360px)  {
+	.contentFooter {
+		flex-wrap: wrap;
+		padding-top: 30px;
+	}	
+}
 .allFooterSocialIcons {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -405,22 +474,19 @@ nav ul li a:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-preferred-size: 20%;
-    flex-basis: 20%;
 }
-.footerSocialIcons {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin-right: 10%;
-    
+.allFooterSocialIcons a {
+	margin-right: 30px;
+}
+@media (max-width : 768px)  {
+	.allFooterSocialIcons a {
+		margin-right: 10px;
+	}	
 }
 .copyRight {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    -ms-flex-preferred-size: 80%;
-    flex-basis: 80%;
 }
 .textCopyRight {
     font-family: "OpenSans-Regular", sans-serif;
