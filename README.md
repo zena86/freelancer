@@ -14,7 +14,7 @@ CSS3     |            |Adobe Photoshop|
 
 **1. Полноэкранный (fullscreen) блок**
 
-![Screenshort 1](/images/imgreadme/screen-main.png)
+![Screenshort 1](/image/imgreadme/screen-main.png)
 &nbsp;
 
 **2. Адаптация до 320px**
