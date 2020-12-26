@@ -19,7 +19,7 @@ CSS3     |            |Adobe Photoshop|
 
 **2. Адаптация до 320px**
 
-![Screenshort 1](/image/imgreadme/screen1.png)
+![Screenshort 1](/image/imgreadme/screen.png)
 &nbsp;
 
 ![Screenshort](/image/imgreadme/screen-mobile1.png)|![Screenshort](/image/imgreadme/screen-mobile2.png)
