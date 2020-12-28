@@ -1,4 +1,4 @@
-<h1 align="center">Главная страница "Freelancer"</h1>
+<h1 align="center">Главная страница сайта "Freelancer"</h1>
 
 DEMO [Freelancer](https://zena86.github.io/freelancer/)
 
